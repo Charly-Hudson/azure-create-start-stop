@@ -1,0 +1,38 @@
+// start
+
+create new tennant
+create sub in main tennent
+move sub to new tennant
+change to new tennent
+navigate to Entra ID
+in overview select view users
+create new user
+    {
+        "Basics":{
+            "name":"admin"
+            "domain":"unchanged"
+            "display-name":"Admin"
+            "Auto-Generate-Password":False
+            "password":"User Input"
+        }
+        "Properties":{
+           "Manager":"main account" 
+           "Others":"UserPreferance"
+        }
+        "Review+Create":"Create"
+    }
+go to subscriptions
+select subscription
+navigate to Access Control IAM
+Add Role Assignemt
+{
+    "role":{
+        "PrivilegedAdministratorRoles":"Contributer"
+    }
+    "Members":{
+        "AssignedAccessTo":"User, Group or service principle"
+        "Members":"The New user"
+        "Descriptions":"Optional"
+    }
+    "Review and assign":"Assign"
+}
